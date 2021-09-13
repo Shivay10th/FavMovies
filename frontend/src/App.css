@@ -1,0 +1,125 @@
+/** @format */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	background-color: #485461;
+	background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 1.7em;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	padding-bottom: 20px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+.container {
+	margin: auto;
+	max-width: 1100px;
+	/* overflow: auto; */
+	padding: 0 20px;
+}
+
+.text-primary {
+	color: #ffc08a;
+}
+
+.lead {
+	font-size: 20px;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 18px;
+	padding: 15px 20px;
+	color: #fff;
+	background: rgba(125, 62, 47, 0.7);
+	cursor: pointer;
+}
+
+.btn-light {
+	color: #333;
+	background: #fff;
+}
+
+.bg-dark {
+	color: #f4f4f4;
+	background: rgb(122, 62, 47);
+}
+
+.bg-light {
+	color: #333;
+	background: #f4f4f4;
+}
+
+.bg-primary {
+	color: #333;
+	background: #f7c08a;
+}
+
+.clr {
+	clear: both;
+}
+
+.btn:hover {
+	color: #333;
+	background-color: #f7c08a;
+}
+
+#navbar {
+	background-color: #333;
+	color: #fff;
+	overflow: auto;
+}
+
+#navbar a {
+	color: white;
+}
+
+#navbar h1 {
+	float: left;
+	padding: 20px;
+}
+#navbar ul {
+	list-style: none;
+	float: right;
+}
+#navbar ul li {
+	float: left;
+}
+#navbar ul li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+	background-color: #444 !important;
+	color: #f7c08a !important;
+}
+
+.card-list {
+	width: 85vw;
+	margin: 2% auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+}
