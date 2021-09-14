@@ -29,7 +29,9 @@ export const login = (user) => {
 
 export const authenticate = (data, next) => {
 	if (typeof window !== 'undefined') {
-		localStorage.setItem('jwt', data);
+		localStorage.setItem('jwt', JSON.stringify(data));
+
+		localStorage.setItem('id', data.user._id);
 		next();
 	}
 };
@@ -51,8 +53,7 @@ export const isAuthenticated = () => {
 		return false;
 	}
 	if (localStorage.getItem('jwt')) {
-		console.log(JSON.parse(localStorage.getItem('jwt')));
-		return JSON.parse(JSON.stringify(localStorage.getItem('jwt')));
+		return JSON.parse(localStorage.getItem('jwt'));
 	} else {
 		return false;
 	}

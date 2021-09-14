@@ -30,7 +30,6 @@ exports.showFav = async (req, res) => {
 						msg: 'User Not Found',
 					});
 				} else {
-					console.log(user.fav);
 					return res.status(200).json(user.fav);
 				}
 			}

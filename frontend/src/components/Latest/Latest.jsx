@@ -10,7 +10,7 @@ function Latest() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const data = await (await fetch(`${API}\\latest`)).json();
-			console.log(data + '%%%5');
+			// console.log(data);
 			setMovies(data);
 		};
 		fetchData();

@@ -81,6 +81,7 @@ p {
 .btn:hover {
 	color: #333;
 	background-color: #f7c08a;
+	cursor: pointer;
 }
 
 #navbar {

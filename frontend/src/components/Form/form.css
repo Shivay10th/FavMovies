@@ -16,7 +16,7 @@
 .form h2 {
 	margin: 0 0 30px;
 	padding: 0;
-	color: #fff;
+	color: #f7c08a;
 	text-align: center;
 }
 
@@ -50,14 +50,14 @@
 .form .elementBox input:valid ~ label {
 	top: -20px;
 	left: 0;
-	color: #fff;
+	color: #f7c08a;
 	font-size: 12px;
 }
 
 button {
 	display: inline-block;
 	padding: 0.35em 1.2em;
-	border: 0.1em solid #ffffff;
+	border: 0.1em solid gray;
 	background: transparent;
 	margin: 0 0.3em 0.3em 0;
 	border-radius: 0.12em;
@@ -70,7 +70,10 @@ button {
 	transition: all 0.2s;
 }
 
-button :hover {
-	color: #000000;
-	background-color: #ffffff;
+button:hover {
+	color: #f7c08a;
+
+	box-shadow: 0 15px 25px rgba(194, 183, 183, 0.055);
+
+	cursor: pointer;
 }

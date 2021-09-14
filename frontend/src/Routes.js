@@ -7,6 +7,7 @@ import Signup from './components/Form/SignUp';
 import Login from './components/Form/Login';
 import Popular from './components/Popular/popular';
 import Latest from './components/Latest/Latest';
+import Fav from './components/Fav/Fav';
 export default function Routes() {
 	return (
 		<BrowserRouter>
@@ -16,6 +17,7 @@ export default function Routes() {
 				<Route path="/latest" exact component={Latest}></Route>
 				<Route path="/login" exact component={Login}></Route>
 				<Route path="/signup" exact component={Signup}></Route>
+				<Route path="/fav" exact component={Fav}></Route>
 				<Route exact path="/">
 					<Redirect to="/discover" />
 				</Route>

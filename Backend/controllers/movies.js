@@ -19,8 +19,16 @@ exports.popular = async (req, res) => {
 
 exports.latest = async (req, res) => {
 	const data = await fetch(
-		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&language=en-US&sort_by=primary_release_date.desc&include_adult=true&include_video=false&page=1&with_watch_monetization_types=flatrate`,
+		`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&language=en-US&sort_by=primary_release_date.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate`,
 	);
 	const movies = data.data;
 	return res.status(200).json(movies.results);
+};
+
+exports.getMovie = async (req, res) => {
+	const data = await fetch(
+		`https://api.themoviedb.org/3/movie/${req.params.movieId}?api_key=${process.env.API_KEY}&language=en-US`,
+	);
+	const movie = data.data;
+	return res.status(200).json(movie);
 };

@@ -12,8 +12,8 @@ const currentTab = (history, path) => {
 const Navbar = ({ history }) => {
 	return (
 		<nav id="navbar">
-			<div class="container">
-				<h1 class="logo">
+			<div className="container">
+				<h1 className="logo">
 					<Link to="/discover">FavMovies</Link>
 				</h1>
 				<ul>
@@ -42,7 +42,7 @@ const Navbar = ({ history }) => {
 						</Link>
 					</li>
 					<li>
-						<Link style={currentTab(history, '/Fav')} to="/fav">
+						<Link style={currentTab(history, '/fav')} to="/fav">
 							Fav
 						</Link>
 					</li>
@@ -57,6 +57,14 @@ const Navbar = ({ history }) => {
 							to="/signup"
 						>
 							Sign Up
+						</Link>
+					</li>
+					<li>
+						<Link
+							style={currentTab(history, '/signout')}
+							to="/signout"
+						>
+							Sign Out
 						</Link>
 					</li>
 				</ul>

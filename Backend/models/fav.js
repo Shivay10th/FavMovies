@@ -5,7 +5,10 @@ const { ObjectId } = mongoose.Schema;
 
 favSchema = new mongoose.Schema(
 	{
-		movieId: String,
+		movieId: {
+			type: String,
+			unique: true,
+		},
 	},
 	{ timestamps: true },
 );

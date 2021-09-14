@@ -7,8 +7,8 @@ import './form.css';
 import { Redirect } from 'react-router';
 const Login = () => {
 	const [values, setValues] = useState({
-		email: '',
-		password: '',
+		email: 'shivay10th@gmail.com',
+		password: '123456789,',
 		error: '',
 		didRedirect: false,
 	});
@@ -29,6 +29,7 @@ const Login = () => {
 				if (data.error) {
 					setValues({ ...values, error: data.error });
 				} else {
+					console.log(data);
 					authenticate(data, () => {
 						setValues({
 							...values,
