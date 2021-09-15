@@ -21,9 +21,9 @@ const Login = () => {
 
 	const onSubmit = (event) => {
 		event.preventDefault();
-		console.log(email);
+		// console.log(email);
 		setValues({ ...values, error: false });
-		console.log(email);
+		// console.log(email);
 		login({ email, password })
 			.then((data) => {
 				if (data.error) {

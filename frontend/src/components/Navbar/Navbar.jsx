@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { isAuthenticated, logout } from '../Auth/index';
 const currentTab = (history, path) => {
 	if (history.location.pathname === path) {
 		return { color: '#f7c08a', backgroundColor: '#444' };
@@ -41,31 +42,47 @@ const Navbar = ({ history }) => {
 							Latest
 						</Link>
 					</li>
+					{isAuthenticated() && (
+						<li>
+							<Link style={currentTab(history, '/fav')} to="/fav">
+								Fav
+							</Link>
+						</li>
+					)}
+
+					{!isAuthenticated() && (
+						<React.Fragment>
+							<li>
+								<Link
+									style={currentTab(history, '/login')}
+									to="/login"
+								>
+									Login
+								</Link>
+							</li>
+							<li>
+								<Link
+									style={currentTab(history, '/signup')}
+									to="/signup"
+								>
+									Sign Up
+								</Link>
+							</li>
+						</React.Fragment>
+					)}
 					<li>
-						<Link style={currentTab(history, '/fav')} to="/fav">
-							Fav
-						</Link>
-					</li>
-					<li>
-						<Link style={currentTab(history, '/login')} to="/login">
-							Login
-						</Link>
-					</li>
-					<li>
-						<Link
-							style={currentTab(history, '/signup')}
-							to="/signup"
-						>
-							Sign Up
-						</Link>
-					</li>
-					<li>
-						<Link
-							style={currentTab(history, '/signout')}
-							to="/signout"
-						>
-							Sign Out
-						</Link>
+						{isAuthenticated() && (
+							<span
+								className="logout"
+								onClick={() => {
+									logout(() => {
+										history.push('/');
+									});
+								}}
+							>
+								Sign Out
+							</span>
+						)}
 					</li>
 				</ul>
 			</div>

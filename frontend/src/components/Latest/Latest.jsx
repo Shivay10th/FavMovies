@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import { API } from '../../Backend.js';
-import { Card } from '../card/card';
+import Card from '../card/card';
 
 function Latest() {
 	const [movies, setMovies] = useState([]);

@@ -18,5 +18,20 @@
 
 .card-container:hover {
 	transform: scale(1.05);
+
 	box-shadow: -2px -2px 20px rgb(94, 19, 16), inset 10px 10px 30px #4e0505;
+}
+
+.title {
+	margin-top: 10px;
+	text-decoration: wavy;
+}
+
+.sm {
+	font-weight: bolder;
+}
+.cp {
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
