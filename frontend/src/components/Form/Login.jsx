@@ -7,8 +7,8 @@ import './form.css';
 import { Redirect } from 'react-router';
 const Login = () => {
 	const [values, setValues] = useState({
-		email: 'shivay10th@gmail.com',
-		password: '123456789,',
+		email: '',
+		password: '',
 		error: '',
 		didRedirect: false,
 	});
