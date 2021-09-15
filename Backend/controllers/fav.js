@@ -9,10 +9,7 @@ exports.addFav = async (req, res) => {
 		await fav.save();
 		console.log(typeof +' ' + fav);
 		user.fav.push(fav);
-		await user.save();
-		return res.status(200).json({
-			msg: 'success',
-		});
+		res.status(200).json({ msg: 'success' });
 	} catch (err) {
 		console.log(err);
 	}

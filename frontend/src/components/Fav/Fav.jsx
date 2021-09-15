@@ -7,9 +7,10 @@ import Card from '../card/card';
 
 function Fav() {
 	const [movies, setMovies] = useState([]);
-	const token = JSON.parse(localStorage.getItem('jwt')).token;
-	const userId = JSON.parse(localStorage.getItem('jwt')).user._id;
+
 	useEffect(() => {
+		const token = JSON.parse(localStorage.getItem('jwt')).token;
+		const userId = JSON.parse(localStorage.getItem('jwt')).user._id;
 		const fetchData = async () => {
 			const data = await fetch(`${API}\\user\\${userId}\\showfav`, {
 				method: 'GET',
